@@ -138,9 +138,10 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 let bobsTotal = purchases.reduce((total, current, index, arr) => {
-  console.log(current)
-  
-})
+   if(current.owner === "Bob") {
+     return total + current.price;
+    }
+},0)
 
 
 
