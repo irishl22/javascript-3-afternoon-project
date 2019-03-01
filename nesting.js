@@ -44,14 +44,24 @@ var employees = [
 // Do not edit the code above.
 
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
+  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop
+  over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
 
-//Code Here
-
+function employeeUpdater() {
+  for(employees) {
+    if(name === "Theo") {
+      delete obj[item];
+    // } else if(obj[item] === "Lorie") {
+    //   obj.department = "HR";
+    // }
+  }
+  return obj;
+}
+console.log(employeeUpdater(employees))
 
 
 ////////// PROBLEM 2 //////////
@@ -62,13 +72,24 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 /*
   The array above represents IDs tied to reported workplace accidents. 
-  An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
-    1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
+  An employee accidentally entered in duplicates to array, making it look as though there are more accidents 
+  this year than there actually are.
+    1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the 
+       workplaceAccidents array.
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(arr) {
+  for(i = 0; i < length.arr; i++) {
+    for(j = 1; j < length.arr; j++) {
+      if(arr[i] === arr[j]) {
+        arr.splice(j,0)
+      }
+    }
+  }
+  return arr;
+}
 
 
 
@@ -97,8 +118,12 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
+var grumpyActivity; 
 var fluffy2ndFriend;
+
+grumpyActivity = cat.catFriends[0].activities[1];
+fluffy2ndFriend = cat.catFriends[1].name
+console.log(fluffy2ndFriend)
 
 
 
