@@ -51,17 +51,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
+
 function employeeUpdater() {
-  for(employees) {
-    if(name === "Theo") {
-      delete obj[item];
-    // } else if(obj[item] === "Lorie") {
-    //   obj.department = "HR";
-    // }
+  for(var i = 0; i < employees.length; i++) {
+    if(employees[i].firstName === 'Theo') {
+       employees.splice(i,1);
+    } else if(employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR'
+    }
   }
-  return obj;
+  return employees;
 }
-console.log(employeeUpdater(employees))
+
+employeeUpdater()
 
 
 ////////// PROBLEM 2 //////////
@@ -80,16 +82,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-function removeDuplicates(arr) {
-  for(i = 0; i < length.arr; i++) {
-    for(j = 1; j < length.arr; j++) {
-      if(arr[i] === arr[j]) {
-        arr.splice(j,0)
+function removeDuplicates() {
+  for(i = 0; i < workplaceAccidents.length; i++) {
+    for(j = 1; j < workplaceAccidents.length; j++) {
+      if(workplaceAccidents[i] === workplaceAccidents[j]) {
+        workplaceAccidents.splice(j,1);
       }
     }
   }
-  return arr;
+  return workplaceAccidents;
 }
+
+removeDuplicates()
+console.log(workplaceAccidents)
 
 
 
@@ -163,7 +168,14 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner() {
+  for(i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = 'false';
+  }
+  return myCar
+}
+
+recordCleaner()
 
 
 
@@ -182,6 +194,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper() {
+  for(let i = 0; i < numsArr.length; i++) {
+    for(j = 0; j < numsArr[i].length; j++) {
+      if(numsArr[i][j] % 2 == 0) {
+        numsArr[i][j] = "even";
+      } else {
+        numsArr[i][j] = "odd";
+      }
+  
+    } 
+  } 
+}
+
+console.log(numsArr)
 
 
