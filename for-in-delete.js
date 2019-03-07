@@ -145,7 +145,6 @@ function removePassword(obj) {
 }
 
 
-
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -203,7 +202,7 @@ function startsWithK(obj) {
 
 function hiddenTreasure(obj) {
   for(let key in obj) {
-    if(!key.includes('treasure')) {
+    if(!obj[key].includes('treasure')) {
       delete obj[key];
     }
   }
